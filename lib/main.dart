@@ -1,22 +1,18 @@
-import 'package:dog_api/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+import 'screens/initial_screen.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+void main() => runApp(const DogAPI());
+
+class DogAPI extends StatelessWidget {
+  const DogAPI({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DogAPI',
-      debugShowCheckedModeBanner: false,
+      title: "DogAPI",
       theme: ThemeData.dark(),
-      home: const HomePage()
-
+      home: const InitialScreen(),
     );
   }
 }
-
